@@ -137,7 +137,6 @@ const nextConfig = {
   // Experimental features
   experimental: {
     serverComponentsExternalPackages: ['@prisma/client', 'bcryptjs'],
-    appDir: true,
   },
 
   // Performance optimizations
