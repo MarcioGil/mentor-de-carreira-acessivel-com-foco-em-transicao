@@ -201,6 +201,40 @@ cd mentor-de-carreira-acessivel-com-foco-em-transicao
 
 ---
 
+## 👨‍💻 **SOBRE O CRIADOR - Márcio Gil**
+
+### 🚀 **Quem Sou Eu**
+
+Olá! Sou **Márcio Gil**, desenvolvedor fullstack apaixonado por **tecnologia com propósito social**. Criei esta plataforma porque acredito que **todos merecem acesso à mentoria de carreira de qualidade**, independente da sua condição socioeconômica.
+
+### 💼 **Minha Jornada Profissional**
+
+- 🎯 **Desenvolvedor Fullstack** especializado em **React/Next.js** e **Python/FastAPI**
+- 🧠 **Entusiasta de IA** com foco em **RAG (Retrieval-Augmented Generation)** e **LLMs**
+- 📱 **Expert em UX Mobile** com experiência em **PWAs** e **acessibilidade**
+- 🌟 **Defensor da inclusão digital** e **tecnologia para impacto social**
+
+### 🎯 **Minha Visão Técnica**
+
+Desenvolvo soluções que combinam:
+- **🧠 Inteligência Artificial** de ponta para personalização
+- **📱 Interfaces intuitivas** otimizadas para mobile-first
+- **♿ Acessibilidade total** (comandos de voz, screen readers)
+- **🏗️ Arquitetura escalável** preparada para milhões de usuários
+
+### 🌍 **Por Que Este Projeto?**
+
+**Transformar vidas através da tecnologia.** Venho de uma realidade onde mentoria de qualidade era privilégio de poucos. Hoje, com IA e desenvolvimento fullstack, posso democratizar esse acesso.
+
+### 📬 **Vamos Conectar?**
+
+- 💼 **LinkedIn**: [linkedin.com/in/marciogil](https://linkedin.com/in/marciogil)
+- 🐙 **GitHub**: [github.com/MarcioGil](https://github.com/MarcioGil)
+- 📧 **Email**: contato@marciogil.dev
+- 🌐 **Portfolio**: [marciogil.dev](https://marciogil.dev)
+
+---
+
 *"Tecnologia sem propósito é apenas código. Tecnologia com propósito pode mudar o mundo."* 🌍
 
 **Vamos juntos democratizar o acesso à mentoria de carreira?** 🚀
