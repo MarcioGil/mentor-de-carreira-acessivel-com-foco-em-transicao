@@ -34,29 +34,29 @@ function QuickAction({ icon: Icon, title, description, href, color }: QuickActio
       onClick={() => router.push(href)}
       className={cn(
         'group w-full p-6 rounded-xl text-left transition-all duration-200',
-        'border border-border hover:border-primary/50',
-        'bg-background hover:bg-primary/5',
-        'focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary',
+        'border-2 border-gray-200 hover:border-primary',
+        'bg-white hover:bg-primary/5 shadow-md hover:shadow-lg',
+        'focus:outline-none focus:ring-4 focus:ring-primary/50 focus:border-primary',
         'thumb-zone'
       )}
     >
       <div className="flex items-center gap-4">
         <div className={cn(
-          'p-3 rounded-lg transition-colors',
+          'p-4 rounded-xl transition-transform',
           color,
-          'group-hover:scale-110 transition-transform'
+          'group-hover:scale-110'
         )}>
-          <Icon className="w-6 h-6 text-white" />
+          <Icon className="w-8 h-8 text-white" />
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+          <h3 className="font-bold text-xl text-foreground group-hover:text-primary transition-colors mb-2">
             {title}
           </h3>
-          <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
+          <p className="text-base text-gray-600 leading-relaxed">
             {description}
           </p>
         </div>
-        <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+        <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-primary transition-colors" />
       </div>
     </button>
   )
@@ -112,29 +112,29 @@ export default function HomePage() {
   const quickActions = [
     {
       icon: FileText,
-      title: 'Analisar Currículo',
-      description: 'IA analisa seu currículo e sugere melhorias baseadas nas vagas do mercado',
+      title: '📄 Melhorar Currículo',
+      description: 'A inteligência artificial vai olhar seu currículo e dar dicas simples',
       href: '/curriculo/analise',
       color: 'bg-blue-500'
     },
     {
       icon: MessageSquare,
-      title: 'Simular Entrevista',
-      description: 'Pratique entrevistas com IA adaptada ao seu perfil e vaga desejada',
+      title: '🗣️ Treinar Entrevista',
+      description: 'Pratique responder perguntas de entrevista sem pressão',
       href: '/entrevista/simulacao',
       color: 'bg-green-500'
     },
     {
       icon: Search,
-      title: 'Buscar Vagas',
-      description: 'Encontre oportunidades personalizadas com base no seu perfil',
+      title: '🔍 Achar Emprego',
+      description: 'Encontre vagas de trabalho que combinam com você',
       href: '/vagas/busca',
       color: 'bg-purple-500'
     },
     {
       icon: BookOpen,
-      title: 'Cursos e Capacitação',
-      description: 'Desenvolva habilidades em demanda no mercado de trabalho',
+      title: '📚 Aprender Grátis',
+      description: 'Cursos gratuitos para conseguir um emprego melhor',
       href: '/cursos',
       color: 'bg-orange-500'
     }
@@ -186,35 +186,32 @@ export default function HomePage() {
             <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center mx-auto mb-4">
               <Brain className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-foreground mb-2">
-              Olá, {userName}! 👋
+            <h1 className="text-3xl font-bold text-foreground mb-2">
+              🎯 Conseguir Emprego
             </h1>
-            <p className="text-muted-foreground">
-              Bem-vindo à sua jornada de desenvolvimento profissional com IA
+            <p className="text-lg text-muted-foreground">
+              Ajuda gratuita com inteligência artificial
             </p>
           </div>
 
           {/* Voice Command Hint */}
-          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-6">
-            <div className="flex items-center gap-2 text-primary mb-2">
-              <Zap className="w-5 h-5" />
-              <span className="font-medium">🎤 Comandos de Voz Ativos!</span>
+          <div className="bg-green-100 border-2 border-green-300 rounded-lg p-4 mb-6">
+            <div className="flex items-center gap-2 text-green-700 mb-2">
+              <Zap className="w-6 h-6" />
+              <span className="font-bold text-lg">🎤 FALE E EU ENTENDO!</span>
             </div>
-            <p className="text-sm text-muted-foreground mb-2">
-              Toque no botão azul do microfone e diga:
+            <p className="text-base text-green-800 mb-3 font-medium">
+              Aperte o botão azul e fale:
             </p>
-            <div className="text-sm space-y-1">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full"></span>
-                <code className="text-xs bg-gray-100 px-2 py-1 rounded">"analisar currículo"</code>
+            <div className="space-y-2">
+              <div className="bg-white p-3 rounded border-2 border-green-200">
+                <span className="font-bold text-green-800">"melhorar currículo"</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full"></span>
-                <code className="text-xs bg-gray-100 px-2 py-1 rounded">"simular entrevista"</code>
+              <div className="bg-white p-3 rounded border-2 border-green-200">
+                <span className="font-bold text-green-800">"treinar entrevista"</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full"></span>
-                <code className="text-xs bg-gray-100 px-2 py-1 rounded">"buscar vagas"</code>
+              <div className="bg-white p-3 rounded border-2 border-green-200">
+                <span className="font-bold text-green-800">"achar emprego"</span>
               </div>
             </div>
           </div>
@@ -222,91 +219,81 @@ export default function HomePage() {
 
         {/* Quick Actions */}
         <section>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            Ações Rápidas
+          <h2 className="text-2xl font-bold text-foreground mb-4 text-center">
+            🚀 O que você quer fazer hoje?
           </h2>
-          <div className="grid gap-4">
+          <div className="grid gap-6">
             {quickActions.map((action, index) => (
               <QuickAction key={index} {...action} />
             ))}
           </div>
         </section>
 
-        {/* Statistics */}
-        <section>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            Impacto da Plataforma
-          </h2>
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((stat, index) => (
-              <StatCard key={index} {...stat} />
-            ))}
-          </div>
-        </section>
-
         {/* Mission Statement */}
-        <section className="bg-gradient-to-br from-primary/10 to-purple/10 rounded-xl p-6 border border-primary/20">
+        <section className="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-6 border-2 border-blue-200">
           <div className="text-center">
-            <h2 className="text-xl font-semibold text-foreground mb-3">
-              Nossa Missão
+            <h2 className="text-2xl font-bold text-blue-800 mb-3">
+              💝 Por que criamos isso?
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Democratizar o acesso a mentoria de carreira de qualidade através 
-              da inteligência artificial, especialmente para jovens em 
-              vulnerabilidade social e pessoas em transição profissional.
+            <p className="text-lg text-blue-700 leading-relaxed">
+              Acreditamos que <strong>toda pessoa merece ter um bom emprego</strong>. 
+              Nossa inteligência artificial é gratuita e foi feita especialmente 
+              para quem não tem dinheiro para pagar coaching caro.
             </p>
           </div>
         </section>
 
         {/* Getting Started */}
         <section>
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            Como Começar
+          <h2 className="text-2xl font-bold text-foreground mb-4 text-center">
+            📋 Como usar em 3 passos simples
           </h2>
-          <div className="space-y-3">
-            <div className="flex items-center gap-3 p-3 rounded-lg border border-border">
-              <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
+          <div className="space-y-4">
+            <div className="flex items-center gap-4 p-4 rounded-lg border-2 border-green-200 bg-green-50">
+              <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                 1
               </div>
-              <span className="text-sm">Analise seu currículo para identificar pontos de melhoria</span>
+              <span className="text-lg font-medium">Melhore seu currículo para chamar atenção</span>
             </div>
-            <div className="flex items-center gap-3 p-3 rounded-lg border border-border">
-              <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
+            <div className="flex items-center gap-4 p-4 rounded-lg border-2 border-blue-200 bg-blue-50">
+              <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                 2
               </div>
-              <span className="text-sm">Pratique entrevistas para ganhar confiança</span>
+              <span className="text-lg font-medium">Treine entrevistas até ficar confiante</span>
             </div>
-            <div className="flex items-center gap-3 p-3 rounded-lg border border-border">
-              <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
+            <div className="flex items-center gap-4 p-4 rounded-lg border-2 border-purple-200 bg-purple-50">
+              <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                 3
               </div>
-              <span className="text-sm">Busque vagas alinhadas com seu perfil</span>
+              <span className="text-lg font-medium">Procure vagas que combinam com você</span>
             </div>
           </div>
         </section>
 
         {/* Accessibility Note */}
-        <section className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-4 text-center border border-blue-200">
-          <h3 className="font-semibold text-gray-800 mb-2">📱 Perfeito para o Celular!</h3>
-          <p className="text-sm text-gray-600 mb-3">
-            Use no ônibus, trem ou metrô com comandos de voz 🎤
+        <section className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 text-center border-2 border-yellow-300">
+          <h3 className="font-bold text-xl text-gray-800 mb-3">📱 PERFEITO NO SEU CELULAR!</h3>
+          <p className="text-lg text-gray-700 mb-4 font-medium">
+            Use no ônibus, trem ou metrô sem problemas! 🚌🚇
           </p>
-          <div className="grid grid-cols-2 gap-2 text-xs">
-            <div className="bg-white rounded p-2 border">
-              <span className="font-medium">✅ Funciona offline</span>
+          <div className="grid grid-cols-2 gap-3 text-sm mb-4">
+            <div className="bg-white rounded-lg p-3 border-2 border-green-200">
+              <span className="font-bold text-green-700">✅ Funciona sem internet</span>
             </div>
-            <div className="bg-white rounded p-2 border">
-              <span className="font-medium">✅ Comandos de voz</span>
+            <div className="bg-white rounded-lg p-3 border-2 border-blue-200">
+              <span className="font-bold text-blue-700">✅ Comando de voz</span>
             </div>
-            <div className="bg-white rounded p-2 border">
-              <span className="font-medium">✅ Interface grande</span>
+            <div className="bg-white rounded-lg p-3 border-2 border-purple-200">
+              <span className="font-bold text-purple-700">✅ Botões grandes</span>
             </div>
-            <div className="bg-white rounded p-2 border">
-              <span className="font-medium">✅ Modo escuro</span>
+            <div className="bg-white rounded-lg p-3 border-2 border-gray-400">
+              <span className="font-bold text-gray-700">✅ Tela escura</span>
             </div>
           </div>
-          <div className="mt-3 p-2 bg-yellow-100 rounded text-xs text-yellow-800">
-            💡 <strong>Dica:</strong> Adicione à tela inicial do celular para usar como app!
+          <div className="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4">
+            <span className="text-lg font-bold text-yellow-800">
+              💡 DICA: Adicione na tela inicial do celular como um app!
+            </span>
           </div>
         </section>
       </div>

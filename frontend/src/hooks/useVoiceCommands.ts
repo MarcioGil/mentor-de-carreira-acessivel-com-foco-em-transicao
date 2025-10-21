@@ -48,55 +48,56 @@ declare global {
   }
 }
 
-// Comandos de voz mapeados
+// Comandos de voz mapeados - VERSÃO SIMPLES E ACESSÍVEL
 const VOICE_COMMANDS = {
   // Navegação principal
   'ir para home': '/',
   'página inicial': '/',
   'ir para início': '/',
+  'início': '/',
   'voltar': () => window.history.back(),
-  'avançar': () => window.history.forward(),
   
-  // Análise de currículo
+  // Análise de currículo - PALAVRAS SIMPLES
+  'melhorar currículo': '/curriculo/analise',
   'analisar currículo': '/curriculo/analise',
-  'análise currículo': '/curriculo/analise',
-  'revisar currículo': '/curriculo/analise',
-  'avaliar currículo': '/curriculo/analise',
-  'currículo': '/curriculo',
+  'currículo': '/curriculo/analise',
+  'cv': '/curriculo/analise',
+  'curriculum': '/curriculo/analise',
   
-  // Simulação de entrevistas
-  'simular entrevista': '/entrevista/simulacao',
-  'simulação entrevista': '/entrevista/simulacao',
+  // Simulação de entrevistas - PALAVRAS SIMPLES  
   'treinar entrevista': '/entrevista/simulacao',
-  'praticar entrevista': '/entrevista/simulacao',
-  'entrevista': '/entrevista',
+  'simular entrevista': '/entrevista/simulacao',
+  'entrevista': '/entrevista/simulacao',
+  'praticar': '/entrevista/simulacao',
+  'treinar': '/entrevista/simulacao',
   
-  // Busca de vagas
-  'buscar vagas': '/vagas/busca',
-  'procurar vagas': '/vagas/busca',
-  'encontrar vagas': '/vagas/busca',
-  'vagas': '/vagas',
-  'empregos': '/vagas',
+  // Busca de vagas - PALAVRAS SIMPLES
+  'achar emprego': '/vagas/busca',
+  'buscar emprego': '/vagas/busca',
+  'procurar emprego': '/vagas/busca',
+  'emprego': '/vagas/busca',
+  'trabalho': '/vagas/busca',
+  'vagas': '/vagas/busca',
+  'trampo': '/vagas/busca',
   
-  // Cursos e treinamentos
-  'cursos': '/cursos',
-  'treinamentos': '/cursos',
-  'capacitação': '/cursos',
+  // Cursos e treinamentos - PALAVRAS SIMPLES
+  'aprender': '/cursos',
   'estudar': '/cursos',
+  'curso': '/cursos',
+  'cursos': '/cursos',
+  'capacitar': '/cursos',
   
-  // Mentoria
-  'mentoria': '/mentoria',
-  'conversar com mentor': '/mentoria/chat',
-  'chat mentor': '/mentoria/chat',
-  'falar com mentor': '/mentoria/chat',
+  // Mentoria - PALAVRAS SIMPLES
+  'conversar': '/mentoria/chat',
+  'dúvida': '/mentoria/chat',
+  'pergunta': '/mentoria/chat',
+  'mentoria': '/mentoria/chat',
   
-  // Perfil e configurações
+  // Perfil e configurações - PALAVRAS SIMPLES
   'meu perfil': '/perfil',
   'perfil': '/perfil',
-  'configurações': '/configuracoes',
-  'ajustes': '/configuracoes',
-  'sair': '/auth/logout',
-  'logout': '/auth/logout',
+  'configurar': '/configuracoes',
+  'ajustar': '/configuracoes',
   
   // Funcionalidades
   'ajuda': '/ajuda',
@@ -222,17 +223,17 @@ export function useVoiceCommands(): VoiceCommandsHookReturn {
             if (processed) {
               setLastCommand(finalTranscript)
               toast({
-                title: '✅ Comando executado',
-                description: `"${finalTranscript}"`,
+                title: '✅ Entendi!',
+                description: `Executando: "${finalTranscript}"`,
                 variant: 'success',
               })
             } else {
               toast({
-                title: '❓ Comando não reconhecido',
-                description: `Tente dizer: "analisar currículo", "simular entrevista" ou "buscar vagas"`,
+                title: '❓ Não entendi',
+                description: `Tente falar: "melhorar currículo", "treinar entrevista" ou "achar emprego"`,
                 variant: 'warning',
               })
-              speak(`Desculpe, não entendi "${finalTranscript}". Você pode dizer comandos como: analisar currículo, simular entrevista, buscar vagas, ou ir para início.`)
+              speak(`Não entendi "${finalTranscript}". Você pode falar: melhorar currículo, treinar entrevista, achar emprego, ou voltar.`)
             }
             
             setIsProcessing(false)
@@ -245,17 +246,17 @@ export function useVoiceCommands(): VoiceCommandsHookReturn {
         console.error('Speech recognition error:', event.error)
         
         const errorMessages: Record<string, string> = {
-          'no-speech': 'Não consegui ouvir sua voz. Aproxime-se do microfone e tente novamente.',
-          'audio-capture': 'Problema com o microfone. Verifique se está conectado e funcionando.',
-          'not-allowed': 'Preciso de permissão para usar o microfone. Clique no ícone do microfone na barra do navegador.',
-          'network': 'Problema com a internet. Verifique sua conexão.',
-          'language-not-supported': 'Seu navegador não suporta português brasileiro.',
-          'service-not-allowed': 'Serviço de voz não está disponível no momento.',
-          'aborted': 'Comando de voz cancelado.',
-          'bad-grammar': 'Não entendi o comando. Tente falar mais claramente.',
+          'no-speech': 'Não ouvi sua voz. Fale mais perto do microfone.',
+          'audio-capture': 'Problema com o microfone. Verifique se está funcionando.',
+          'not-allowed': 'Preciso que você permita usar o microfone. Clique em "Permitir".',
+          'network': 'Sem internet. Verifique sua conexão.',
+          'language-not-supported': 'Seu celular não entende português.',
+          'service-not-allowed': 'Comando de voz não funciona agora.',
+          'aborted': 'Cancelado.',
+          'bad-grammar': 'Não entendi. Fale mais devagar.',
         }
         
-        const message = errorMessages[event.error] || `Erro no reconhecimento de voz: ${event.error}`
+        const message = errorMessages[event.error] || `Erro: ${event.error}`
         const newError = new Error(message)
         
         setError(newError)
@@ -264,7 +265,7 @@ export function useVoiceCommands(): VoiceCommandsHookReturn {
         isProcessingRef.current = false
         
         toast({
-          title: 'Erro no reconhecimento de voz',
+          title: '⚠️ Problema com a voz',
           description: message,
           variant: 'destructive',
         })
