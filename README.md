@@ -140,7 +140,50 @@ Este projeto é **open source** e foi criado para **gerar impacto social real**.
 
 ---
 
-## 🎯 **COMEÇANDO O DESENVOLVIMENTO**
+## 🚀 **EXPERIMENTE AGORA - SEM BUROCRACIA!**
+
+### 📱 **Para USUÁRIOS (Mobile/Desktop)**
+
+**Quer transformar sua carreira AGORA?** Acesse diretamente:
+
+🌐 **[mentor-carreira.vercel.app](https://mentor-carreira.vercel.app)**
+
+### **📲 Como usar no seu celular:**
+
+1. **📱 Abra o link no seu navegador móvel**
+2. **🎙️ Permita acesso ao microfone** (para comandos de voz)
+3. **✨ Comece a falar**: *"Iniciar análise de currículo"*
+4. **🎯 Cole seu currículo** e descrição da vaga
+5. **🤖 Receba orientação personalizada** da IA
+
+### **🎙️ Comandos de Voz Mobile (Mãos Livres):**
+
+```
+"Analisar meu currículo"     → Análise instantânea
+"Simular entrevista"         → Treino de entrevista
+"Buscar vagas tech"          → Oportunidades em tecnologia
+"Meu plano de carreira"      → Roadmap personalizado
+"Ajuda"                      → Suporte e orientações
+```
+
+### **💡 ZERO Cadastro, ZERO Complicação:**
+- ✅ **Sem criar conta** - Use imediatamente
+- ✅ **Sem download** - Funciona no navegador
+- ✅ **Sem burocracias** - Direto ao ponto
+- ✅ **100% Gratuito** - Sempre será
+
+### **🌟 Ideal para:**
+- 🎯 **Quem busca primeiro emprego** em tech
+- 🔄 **Transição de carreira** para tecnologia  
+- 📈 **Melhorar currículo** para vagas específicas
+- 🎤 **Treinar entrevistas** com IA especializada
+- ♿ **Pessoas com deficiência** (comandos de voz)
+
+---
+
+## 🛠️ **Para DESENVOLVEDORES - Contribuir com o Projeto**
+
+### 🎯 **COMEÇANDO O DESENVOLVIMENTO**
 
 ```bash
 # Clone o repositório

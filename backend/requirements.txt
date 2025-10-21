@@ -1,0 +1,129 @@
+# 🔧 Backend Dependencies - Mentor de Carreira IA
+# FastAPI + RAG + Voice + Analytics
+
+# === CORE FRAMEWORK ===
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# === DATABASE ===
+asyncpg==0.29.0
+sqlalchemy[asyncio]==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# === VECTOR DATABASE ===
+pgvector==0.2.4
+chromadb==0.4.18
+faiss-cpu==1.7.4
+hnswlib==0.7.0
+
+# === AI & LLM ===
+langchain==0.0.340
+langchain-openai==0.0.2
+langchain-community==0.0.7
+openai==1.3.7
+google-generativeai==0.3.2
+anthropic==0.7.8
+
+# === RAG COMPONENTS ===
+sentence-transformers==2.2.2
+tiktoken==0.5.1
+numpy==1.24.4
+scipy==1.11.4
+scikit-learn==1.3.2
+
+# === TEXT PROCESSING ===
+spacy==3.7.2
+nltk==3.8.1
+PyPDF2==3.0.1
+python-docx==1.1.0
+beautifulsoup4==4.12.2
+markdown==3.5.1
+
+# === WEB SCRAPING & APIs ===
+requests==2.31.0
+httpx==0.25.2
+aiohttp==3.9.1
+feedparser==6.0.10
+
+# === AUTHENTICATION & SECURITY ===
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+bcrypt==4.1.2
+
+# === CACHING & SESSIONS ===
+redis==5.0.1
+aioredis==2.0.1
+python-memcached==1.59
+
+# === EMAIL & NOTIFICATIONS ===
+fastapi-mail==1.4.1
+celery==5.3.4
+python-telegram-bot==20.7
+
+# === MONITORING & LOGGING ===
+structlog==23.2.0
+sentry-sdk[fastapi]==1.38.0
+prometheus-fastapi-instrumentator==6.1.0
+
+# === VOICE PROCESSING ===
+speech-recognition==3.10.0
+pydub==0.25.1
+librosa==0.10.1
+soundfile==0.12.1
+
+# === IMAGE PROCESSING ===
+Pillow==10.1.0
+opencv-python==4.8.1.78
+
+# === ANALYTICS & METRICS ===
+pandas==2.1.4
+plotly==5.17.0
+seaborn==0.13.0
+matplotlib==3.8.2
+
+# === API DOCUMENTATION ===
+fastapi-users==12.1.2
+fastapi-pagination==0.12.13
+
+# === TESTING ===
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+httpx==0.25.2
+factory-boy==3.3.0
+
+# === DEVELOPMENT ===
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+mypy==1.7.1
+pre-commit==3.6.0
+
+# === DEPLOYMENT ===
+gunicorn==21.2.0
+docker==6.1.3
+
+# === ENVIRONMENT ===
+python-dotenv==1.0.0
+pyyaml==6.0.1
+click==8.1.7
+
+# === PERFORMANCE ===
+orjson==3.9.10
+python-json-logger==2.0.7
+
+# === SOCIAL MEDIA APIs ===
+tweepy==4.14.0
+linkedin-api==2.0.0
+
+# === KNOWLEDGE BASE ===
+wikipedia==1.4.0
+youtube-transcript-api==0.6.1
+
+# === RATE LIMITING ===
+slowapi==0.1.9
+limits==3.6.0

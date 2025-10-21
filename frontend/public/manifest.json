@@ -1,0 +1,222 @@
+{
+  "name": "Mentor de Carreira IA - Acessível",
+  "short_name": "Mentor IA",
+  "description": "Plataforma de mentoria de carreira com IA e comandos de voz para transporte público",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-chat.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Chat com Mentor IA por comandos de voz"
+    },
+    {
+      "src": "/screenshots/mobile-analysis.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Análise de currículo com IA"
+    },
+    {
+      "src": "/screenshots/mobile-interview.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Simulação de entrevista"
+    },
+    {
+      "src": "/screenshots/desktop-dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dashboard completo"
+    }
+  ],
+  
+  "categories": [
+    "education",
+    "productivity",
+    "business",
+    "lifestyle"
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "Analisar Currículo",
+      "short_name": "Análise",
+      "description": "Análise rápida de currículo vs vaga",
+      "url": "/analyze",
+      "icons": [
+        {
+          "src": "/icons/shortcut-analyze.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Simular Entrevista",
+      "short_name": "Entrevista",
+      "description": "Treino de entrevista com IA",
+      "url": "/interview",
+      "icons": [
+        {
+          "src": "/icons/shortcut-interview.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Chat com Mentor",
+      "short_name": "Chat",
+      "description": "Conversa por voz com mentor IA",
+      "url": "/chat",
+      "icons": [
+        {
+          "src": "/icons/shortcut-chat.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Comandos de Voz",
+      "short_name": "Voz",
+      "description": "Ativar navegação por voz",
+      "url": "/?voice=true",
+      "icons": [
+        {
+          "src": "/icons/shortcut-voice.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+mentoria",
+      "url": "/share?url=%s"
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "resume",
+          "accept": [
+            "application/pdf",
+            "text/plain",
+            ".pdf",
+            ".txt",
+            ".docx"
+          ]
+        }
+      ]
+    }
+  },
+  
+  "file_handlers": [
+    {
+      "action": "/analyze",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "text/plain": [".txt"],
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"]
+      }
+    }
+  ],
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  
+  "prefer_related_applications": false,
+  
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.mentorcarreira.app",
+      "id": "com.mentorcarreira.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/mentor-carreira-ia/id123456789"
+    }
+  ]
+}
