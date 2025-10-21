@@ -222,17 +222,17 @@ export function useVoiceCommands(): VoiceCommandsHookReturn {
             if (processed) {
               setLastCommand(finalTranscript)
               toast({
-                title: 'Comando executado',
+                title: '✅ Comando executado',
                 description: `"${finalTranscript}"`,
                 variant: 'success',
               })
             } else {
               toast({
-                title: 'Comando não reconhecido',
-                description: `Tente: "analisar currículo", "simular entrevista", "buscar vagas"`,
+                title: '❓ Comando não reconhecido',
+                description: `Tente dizer: "analisar currículo", "simular entrevista" ou "buscar vagas"`,
                 variant: 'warning',
               })
-              speak(`Comando não reconhecido. Tente comandos como analisar currículo, simular entrevista ou buscar vagas.`)
+              speak(`Desculpe, não entendi "${finalTranscript}". Você pode dizer comandos como: analisar currículo, simular entrevista, buscar vagas, ou ir para início.`)
             }
             
             setIsProcessing(false)
@@ -245,12 +245,14 @@ export function useVoiceCommands(): VoiceCommandsHookReturn {
         console.error('Speech recognition error:', event.error)
         
         const errorMessages: Record<string, string> = {
-          'no-speech': 'Nenhuma fala detectada. Tente novamente.',
-          'audio-capture': 'Problema com o microfone. Verifique as permissões.',
-          'not-allowed': 'Permissão de microfone negada. Habilite nas configurações.',
-          'network': 'Problema de rede. Verifique sua conexão.',
-          'language-not-supported': 'Idioma não suportado.',
-          'service-not-allowed': 'Serviço não permitido.',
+          'no-speech': 'Não consegui ouvir sua voz. Aproxime-se do microfone e tente novamente.',
+          'audio-capture': 'Problema com o microfone. Verifique se está conectado e funcionando.',
+          'not-allowed': 'Preciso de permissão para usar o microfone. Clique no ícone do microfone na barra do navegador.',
+          'network': 'Problema com a internet. Verifique sua conexão.',
+          'language-not-supported': 'Seu navegador não suporta português brasileiro.',
+          'service-not-allowed': 'Serviço de voz não está disponível no momento.',
+          'aborted': 'Comando de voz cancelado.',
+          'bad-grammar': 'Não entendi o comando. Tente falar mais claramente.',
         }
         
         const message = errorMessages[event.error] || `Erro no reconhecimento de voz: ${event.error}`

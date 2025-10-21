@@ -145,6 +145,29 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
+  // Configurações para acesso mobile na rede local
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, POST, PUT, DELETE, OPTIONS',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: 'Content-Type, Authorization',
+          },
+        ],
+      },
+    ]
+  },
+
   // Image optimization
   images: {
     domains: ['localhost', 'mentor-carreira.vercel.app'],

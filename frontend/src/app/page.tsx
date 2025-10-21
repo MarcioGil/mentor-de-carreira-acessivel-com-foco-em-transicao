@@ -198,12 +198,25 @@ export default function HomePage() {
           <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-6">
             <div className="flex items-center gap-2 text-primary mb-2">
               <Zap className="w-5 h-5" />
-              <span className="font-medium">Comando de Voz Ativo!</span>
+              <span className="font-medium">🎤 Comandos de Voz Ativos!</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Diga "analisar currículo", "simular entrevista" ou "buscar vagas" 
-              para navegar sem usar as mãos
+            <p className="text-sm text-muted-foreground mb-2">
+              Toque no botão azul do microfone e diga:
             </p>
+            <div className="text-sm space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <code className="text-xs bg-gray-100 px-2 py-1 rounded">"analisar currículo"</code>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <code className="text-xs bg-gray-100 px-2 py-1 rounded">"simular entrevista"</code>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <code className="text-xs bg-gray-100 px-2 py-1 rounded">"buscar vagas"</code>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -273,11 +286,28 @@ export default function HomePage() {
         </section>
 
         {/* Accessibility Note */}
-        <section className="bg-muted/50 rounded-lg p-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            <span className="font-medium">💡 Dica:</span> Use comandos de voz no ônibus, 
-            trem ou metrô. Nossa plataforma foi pensada para ser acessível em qualquer situação!
+        <section className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-4 text-center border border-blue-200">
+          <h3 className="font-semibold text-gray-800 mb-2">📱 Perfeito para o Celular!</h3>
+          <p className="text-sm text-gray-600 mb-3">
+            Use no ônibus, trem ou metrô com comandos de voz 🎤
           </p>
+          <div className="grid grid-cols-2 gap-2 text-xs">
+            <div className="bg-white rounded p-2 border">
+              <span className="font-medium">✅ Funciona offline</span>
+            </div>
+            <div className="bg-white rounded p-2 border">
+              <span className="font-medium">✅ Comandos de voz</span>
+            </div>
+            <div className="bg-white rounded p-2 border">
+              <span className="font-medium">✅ Interface grande</span>
+            </div>
+            <div className="bg-white rounded p-2 border">
+              <span className="font-medium">✅ Modo escuro</span>
+            </div>
+          </div>
+          <div className="mt-3 p-2 bg-yellow-100 rounded text-xs text-yellow-800">
+            💡 <strong>Dica:</strong> Adicione à tela inicial do celular para usar como app!
+          </div>
         </section>
       </div>
     </MobileLayout>
