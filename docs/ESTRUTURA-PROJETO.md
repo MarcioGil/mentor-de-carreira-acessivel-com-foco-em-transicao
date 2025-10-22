@@ -506,5 +506,6 @@ docker-compose -f docker-compose.prod.yml up
 
 ---
 
-*Esta estrutura foi pensada para **crescer junto com o projeto**, mantendo **qualidade técnica** e **facilidade de manutenção** mesmo com **milhões de usuários**.* 
+*Esta estrutura foi pensada para **crescer junto com o projeto**, mantendo **qualidade técnica** e **facilidade de manutenção** mesmo com **milhões de usuários**.*
+ 
  

@@ -1,4 +1,4 @@
-# Netlify configuration for deployment
+  # Netlify configuration for deployment
 [build]
   command = "npm run build"
   publish = ".next"
